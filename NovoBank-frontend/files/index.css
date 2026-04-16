@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { font-size: 16px; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #0A0E1A;
+    color: #E8EBF4;
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  button  { font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; outline: none; }
+  input, select, textarea { font-family: 'DM Sans', sans-serif; outline: none; }
+  a { text-decoration: none; color: inherit; }
+
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #141928; }
+  ::-webkit-scrollbar-thumb { background: #252D45; border-radius: 3px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  thead th {
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #8892AA;
+    border-bottom: 1px solid #252D45;
+  }
+  tbody tr { border-bottom: 1px solid rgba(37,45,69,0.5); transition: background 0.15s; }
+  tbody tr:hover { background: #1E2640; }
+  tbody td { padding: 12px 14px; color: #E8EBF4; vertical-align: middle; }
+  tbody tr:last-child { border-bottom: none; }
+}
+
+@layer components {
+  .skeleton {
+    background: linear-gradient(90deg, #1E2640 25%, #252D45 50%, #1E2640 75%);
+    background-size: 200% 100%;
+    @apply animate-shimmer rounded-sm;
+  }
+}
+
+@layer utilities {
+  .delay-0   { animation-delay:   0ms; }
+  .delay-40  { animation-delay:  40ms; }
+  .delay-60  { animation-delay:  60ms; }
+  .delay-80  { animation-delay:  80ms; }
+  .delay-100 { animation-delay: 100ms; }
+  .delay-120 { animation-delay: 120ms; }
+  .delay-160 { animation-delay: 160ms; }
+  .delay-180 { animation-delay: 180ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-240 { animation-delay: 240ms; }
+  .delay-280 { animation-delay: 280ms; }
+  .delay-320 { animation-delay: 320ms; }
+  .delay-360 { animation-delay: 360ms; }
+}
